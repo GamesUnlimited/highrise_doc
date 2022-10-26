@@ -58,6 +58,10 @@
 
 3. # Specific Requirements
 
+   ## Usecase Diagram
+
+   ![](pictures/usecase_diagram/usecase_diagram.png){width=70%}
+
    ## 3.1 Functionality
    3\.1.1 Main Menu
 
