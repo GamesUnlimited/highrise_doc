@@ -1,0 +1,19 @@
+@startuml
+start
+if(player type?) then (attack)
+   group Attack player
+   :Player clicks on map;
+   if (Floor already visited?) then (yes)
+      :Show on map;
+   else (no)
+      :Fog of War;
+   endif;
+   end group
+else (defense)
+   group Defense player
+   :Player clicks on map;
+   :Show whole map;
+   end group
+endif;
+stop
+@enduml
