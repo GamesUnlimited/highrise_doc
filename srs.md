@@ -2,7 +2,7 @@
 
    ## **1.1 Purpose:**
 
-   This Software Requirements Specification (SRS) describes all specifications for the Game “Project: Highrise”. It includes an overview about this project, detailed information about the planned features and conditions for the development process.
+   This Software Requirements Specification (SRS) describes all specifications for the Game "Project: Highrise". It includes an overview about this project, detailed information about the planned features and conditions for the development process.
 
    ## 1.2 Scope:
 
@@ -11,17 +11,17 @@
 
    **Planned Subsystems:**
 
-   \- Menu Screen:
-   The Menu is an essential part of the UI of a Game. Players can start Games, access Settings and get an overview of the Game’s mechanics.
+   \- Menu Screen:
+   The Menu is an essential part of the UI of a Game. Players can start Games, access Settings and get an overview of the Game's mechanics.
 
-   \- Settings Screen:
+   \- Settings Screen:
    The Settings are also essential to the Game. The players can things like volume or the language of the Game.
 
-   \- Defense Screen:
+   \- Defense Screen:
    After a game was started in the Menu Screen, the Defense Screen is loaded. Here, the defending player prepares the level for the attacking player by placing obstacles and hostile bots.
 
-   \- Attack Screen:
-   After the first player is finished placing everything, the attacking player takes over the device and the Attack Screen is loaded. Here, the attacking player tries to infiltrate and clear each floor of the previously prepared skyscraper.
+   \- Attack Screen:
+   After the first player is finished placing everything, the attacking player takes over the device and the Attack Screen is loaded. Here, the attacking player tries to infiltrate and clear each floor of the previously prepared skyscraper.
 
    ## 1.3 References:
 
@@ -42,7 +42,7 @@
 
    ## 2.1 Vision:
 
-   Inspired by many great action-strategy games, we plan on developing our own top-down 2D strategy shooter: Project: Highrise! The game has to be played by two players – one attacking and one defending. While the defending player starts the game by barricading different floors of a skyscraper with different obstacles and hostile bots, the attacking player has to try to clear and reconquer the skyscraper’s floors one by one using his own troops. Project: Highrise is a fun game for you and one of your friends testing your strategic and tactical skills. Will you be able to save the skyscraper?!
+   Inspired by many great action-strategy games, we plan on developing our own top-down 2D strategy shooter: Project: Highrise! The game has to be played by two players – one attacking and one defending. While the defending player starts the game by barricading different floors of a skyscraper with different obstacles and hostile bots, the attacking player has to try to clear and reconquer the skyscraper's floors one by one using his own troops. Project: Highrise is a fun game for you and one of your friends testing your strategic and tactical skills. Will you be able to save the skyscraper?!
 
    ## 2.2 Technology Stack:
 
@@ -65,7 +65,7 @@
 
    GUI Mockup:
 
-   ![](pictures/image3.png){width=70%}
+   ![](pictures/mockups/main_menu.png)
 
    Preconditions: Godot Project Setup finished
    Post conditions: Each entry needs to lead somewhere
@@ -77,7 +77,7 @@
 
    GUI Mockup:
 
-   ![](pictures/image4.png){width=70%}
+   ![](pictures/mockups/settings.png)
 
    Preconditions: Godot Project Setup finished
    Post conditions: Main menu finished, sound setup finished, localized text
@@ -89,12 +89,12 @@
 
    GUI Mockup:
 
-   ![](pictures/image.png){width=70%}
+   ![](pictures/mockups/map_view_attack.png)
 
-   ![](pictures/image1.png){width=599px}
+   ![](pictures/mockups/map_view_defense.png)
 
    Preconditions: level generation done
-   Post conditions: implement button/gesture in defending and attacking player’s overlay to open map
+   Post conditions: implement button/gesture in defending and attacking player's overlay to open map
    Effort estimation: 5h
 
    3\.1.4. Fog of War
@@ -103,7 +103,7 @@
 
    GUI Mockup:
 
-   ![](pictures/image2.png)
+   ![](pictures/mockups/fog_of_war.png)
 
    Preconditions: level generation done
    Effort estimation: 4-5h
@@ -123,7 +123,7 @@
 
    GUI Mockup:
 
-   ![](pictures/MTIGM.png){width=70%}
+   ![](pictures/mockups/mobile_touch_input.png)
 
    Preconditions: Units, Buttons, etc. implemented; Input per Godot input library
    Post conditions: Game can be navigated with touch inputs
@@ -145,7 +145,7 @@
       
    Mockup:
 
-   ![](pictures/PlayerActions.png){width=70%}
+   ![](pictures/mockups/player_actions_menu.png)
 
    3/.2.4 Operative Movement 
    As a Player I want to move certain operatives along a path through the map, I want to control this path with touch input.
@@ -158,4 +158,4 @@
       
    Mockup:
 
-   ![](pictures/PlayerMovement.png){width=70%}
+   ![](pictures/mockups/player_movement.png)
