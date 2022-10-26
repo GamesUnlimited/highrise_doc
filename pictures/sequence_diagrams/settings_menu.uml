@@ -1,0 +1,18 @@
+@startuml
+
+actor User as user
+participant Slider as slider
+participant "Save Button" as save
+participant "Settings Menu" as settings
+database Persistance as fs
+
+fs -> settings : load settings from file
+settings -> slider : move slider to corresponding value
+user -> slider : moves slider
+slider -> settings : update corresponding value
+user -> save : presses
+save -> settings : notify
+settings -> fs : save settings to file
+
+
+@enduml
