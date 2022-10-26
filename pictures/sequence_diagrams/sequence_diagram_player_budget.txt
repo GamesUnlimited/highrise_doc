@@ -1,0 +1,12 @@
+@startuml
+participant Player as p
+participant "Player Budget" as pb
+database "Object Storage" as s
+p -> s : select object
+s -> pb : return number of objects selected
+pb -> pb : reduce Budget by \nnumber of objects selected
+pb -> p : return Budget
+pb -> s : select object
+s -> s : remove selected object 
+s -> p : return selected object
+@enduml
