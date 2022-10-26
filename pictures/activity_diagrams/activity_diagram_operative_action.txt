@@ -1,0 +1,21 @@
+@startuml
+|Attack Player|
+start
+:click on Operative;
+|Backend|
+:Actions are displayed;
+|Attack Player|
+:click on Action;
+|Backend|
+fork
+:Action is highlighted;
+:Operative stops other Actions;<
+|Attack Player|
+fork again
+:click on where Action should take place;
+end fork
+|Backend|
+:Operator performs Action in the clicked place;
+:Action is displayed;
+end
+@enduml
