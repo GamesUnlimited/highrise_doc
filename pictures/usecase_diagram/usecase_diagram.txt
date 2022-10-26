@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+
+:Device Owner: as DO
+
+:Offense Player: as OP
+package Views{
+
+usecase Menu as M
+usecase Setting as S
+usecase "Defense Player View" as DPV
+usecase "Map view" as MV
+usecase "Offense Player View" as OPV
+
+}
+
+package Usability{
+usecase "Hotseat gaming" as HG
+usecase "mobile touch Input" as mtI
+}
+
+package "Game Mechanics"{
+usecase "Defense player budget" as DPB
+usecase "to be continued..."
+}
+
+:Defense Player: as DP
+
+
+
+DP -up-> mtI
+DP -up-> MV
+DP -up-> DPB
+DP -up-> HG
+DP -up-> DPV
+
+OP -down-> mtI
+OP -down-> MV
+OP -down-> OPV
+OP -down-> HG
+
+DO --> M
+DO --> S
+@enduml
