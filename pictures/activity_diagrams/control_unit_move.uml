@@ -1,0 +1,29 @@
+@startuml
+
+|Player|
+start
+:Taps and holds on unit;
+
+|Game|
+:Selects unit;
+
+|Player|
+:Draws the path the unit should walk;
+
+|Game|
+:Waypoints along the path are recorded;
+
+|Interface|
+:Path gets visually displayed;
+
+|Player|
+:Lift finger;
+
+|Game|
+:Unit starts walking the waypoints;
+
+|Interface|
+:Animation of walking unit gets displayed;
+end
+
+@enduml
