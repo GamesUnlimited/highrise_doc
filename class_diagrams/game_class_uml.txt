@@ -98,7 +98,109 @@ Node <|-- "Control Node"
 "Spacial Node" o-- "Collision Shape"
 
 Level <-- "Attack Character": uses
+Level <-- "Defense C@startuml
+class Level{
+Walls: Liste
+Interactables: Liste
+add_object()
+}
+
+interface "Interactable Objects"{
+}
+
+class Wall{
+
+}
+
+class Character{
+state
+health
+recieve_damage()
+}
+
+class "Attack Character"{
+throw_grenade()
+}
+
+
+class "Defense Character"{
+path
+}
+
+class "Defense Store"{
+budget: int
+available_troops: int
+available_traps: int
+available_blocker: int
+available_...: int
+reset_store_inventory()
+}
+
+class "Attack Store"{
+remaining_characters: int
+remaining_flashbangs: int
+remaining_grenades: int
+remaining_...: int
+}
+
+class Game{
+current_level: Level
+defense_store: "Defense Store"
+attack_store: "Attack Store"
+next_level()
+}
+
+
+Game *-- "Defense Store"
+Game *-- "Attack Store"
+Game *-- Level
+Level o-- "Interactable Objects"
+Level o-- Wall
+
+class Node{
+Children: Liste
+}
+class "Spacial Node"{
+x: float
+y: float
+z: float
+}
+class "Control Node"{
+anchors
+}
+class "Kinematic Body"{
+Motions
+}
+class "Static Body"{
+constant_velocities
+}
+class "Collision Shape"{
+shape
+enabled
+}
+Node <|-- "Spacial Node"
+Node <|-- "Control Node"
+"Spacial Node" <|-- "Kinematic Body"
+"Spacial Node" <|-- "Static Body"
+
+
+"Static Body" <|-- Wall
+"Static Body" <|-- "Interactable Objects"
+"Kinematic Body" <|-- Character
+
+"Control Node" <|-- "Attack Store"
+"Control Node" <|-- "Defense Store"
+
+"Node" <|-- Game
+
+"Spacial Node" o-- "Collision Shape"
+
+Level <-- "Attack Character": uses
 Level <-- "Defense Character": uses
+
+Character <|-up- "Defense Character"
+Character <|-up- "Attack Character"
+@endumlharacter": uses
 
 Character <|-- "Defense Character"
 Character <|-- "Attack Character"
