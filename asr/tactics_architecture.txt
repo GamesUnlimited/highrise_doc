@@ -1,0 +1,4 @@
+tactics:
+- We choose the ASR usability where we draw the path for the character ourselves. While drawing, the game will be slowed down to ensure a fair gaming experience. Furthermore, the cancelling of this function will be possible by clicking on the path and deleting it with a pop-up button. 
+architecture:
+- The architecture for our project is determined by and build upon the provided architecture by Godot. As such, the decisions regarding further changes or enhancements will stay consistent. 
