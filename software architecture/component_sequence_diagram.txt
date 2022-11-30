@@ -1,0 +1,10 @@
+@startuml
+Startscreen -> Game: creates
+loop x times
+Game -> LevelGenerator: requests Level
+LevelGenerator -> Game: returns Level
+Game -> Game: runs Round    
+end
+Game -> EndScreen: shows winner
+EndScreen -> Startscreen: back to the beginning
+@enduml

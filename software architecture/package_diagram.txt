@@ -1,0 +1,19 @@
+@startuml
+package Startscreen{
+}
+package Game{
+}
+package LevelGenerator{
+}
+package Shop{
+}
+package Input.GameInput{
+}
+package Input.UiInput{
+}
+Game ..> LevelGenerator: access
+Game ..> Shop: access
+Startscreen ..> Game: uses
+Game ..> Input.GameInput: import
+Startscreen ..> Input.UiInput: import
+@enduml
