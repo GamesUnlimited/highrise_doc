@@ -1,0 +1,25 @@
+@startuml
+User  -> Game : starts game
+Game -> Game : define continue as true\nand counter as 0
+
+loop continue == true
+    Game -> Levelgenerator : add to level generator
+    Levelgenerator -> Level : generate level
+    Level -> Level : play game
+    Level -> Game : done(attacker_won: bool)
+    alt attackerwon == true
+        Game -> Game : increase counter
+    else
+        Game -> Game : set continue to false
+    end
+    alt counter == 3
+        Game -> Game : set continue to false
+    end
+end
+
+alt counter == 3
+    Game -> User : finish(attacker_won = true)
+else
+    Game -> User : finish(attacker_won = false)
+end
+@enduml
